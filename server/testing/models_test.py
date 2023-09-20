@@ -26,7 +26,7 @@ class TestAuthor:
             author_a = Author(name = 'Ben', phone_number = '1231144321')
             author_b = Author(name = 'Ben', phone_number = '1231144321')
             with pytest.raises(IntegrityError):
-                db.session.add(author_a)
+                
                 db.session.add(author_b)
                 db.session.commit()
                 db.session.query(Author).delete()
